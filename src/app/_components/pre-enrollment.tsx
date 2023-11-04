@@ -1,4 +1,5 @@
 'use client';
+import { track } from '@vercel/analytics';
 import InputMask from 'react-input-mask';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -64,6 +65,7 @@ function PreEnrollment() {
       email: values.email,
       phoneNumber: values.phoneNumber,
     });
+    track('pre-enrollment', { location: 'save' });
   };
 
   return (
@@ -72,6 +74,9 @@ function PreEnrollment() {
         <Button
           variant='default'
           size='lg'
+          onClick={() => {
+            track('pre-enrollment', { location: 'investment' });
+          }}
           className='text-md bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105'
         >
           Lista de espera

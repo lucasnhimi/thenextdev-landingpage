@@ -1,3 +1,4 @@
+'use client';
 import { track } from '@vercel/analytics';
 
 import { ModeToggle } from './mode-toggle';

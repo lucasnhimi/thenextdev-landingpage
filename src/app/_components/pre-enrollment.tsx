@@ -94,9 +94,22 @@ function PreEnrollment() {
           <>
             <DialogHeader>
               <DialogTitle>Parabéns! 🎉</DialogTitle>
-              <DialogDescription>
-                Suas informações foram enviadas para lista de espera. Aguarde
-                que entraremos em contato.
+              <DialogDescription className='space-y-4'>
+                <p>
+                  Suas informações foram enviadas para lista de espera. Aguarde
+                  que entraremos em contato.
+                </p>
+                <p>
+                  Entre para o grupo no WhatsApp clicando{' '}
+                  <a
+                    className='text-bold text-primary underline'
+                    target='_blank'
+                    href='https://chat.whatsapp.com/JCHTqEeRVJm3MRFUIW2IDp'
+                  >
+                    aqui
+                  </a>{' '}
+                  para receber novidades sobre o curso.
+                </p>
               </DialogDescription>
             </DialogHeader>
             <DialogClose>

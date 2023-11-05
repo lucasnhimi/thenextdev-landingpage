@@ -29,7 +29,7 @@ function IntroSection() {
       </svg>
       <div className='container flex max-w-[64rem] flex-col items-center text-center gap-4'>
         <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center'>
-          📅 1ª Turma dia 06 de novembro de 2023
+          📅 1ª Turma novembro de 2023
           <ModeToggle />
         </span>
         <h1 className='font-heading text-4xl md:text-6xl lg:text-7xl'>

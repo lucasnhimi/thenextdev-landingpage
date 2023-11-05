@@ -189,13 +189,17 @@ function FeatureSection() {
           <AccordionItem value='item-12'>
             <AccordionTrigger>Módulo 12: Bônus 1</AccordionTrigger>
             <AccordionContent className='text-left'>
-              Módulo bônus 1.
+              Quarta-feira, 6 de dezembro · 7:00 até 8:00pm Fuso horário:
+              America/Sao_Paulo Como participar do Google Meet Link da
+              videochamada: https://meet.google.com/som-akuz-nbo
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-13'>
             <AccordionTrigger>Módulo 13: Bônus 2</AccordionTrigger>
             <AccordionContent className='text-left'>
-              Módulo bônus 2.
+              Quarta-feira, 10 de janeiro de 2024 · 7:00 até 8:00pm Fuso
+              horário: America/Sao_Paulo Como participar do Google Meet Link da
+              videochamada: https://meet.google.com/emy-cgvp-zav
             </AccordionContent>
           </AccordionItem>
         </Accordion>

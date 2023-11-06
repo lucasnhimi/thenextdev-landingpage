@@ -26,7 +26,8 @@ function FaqSection() {
                 botão <span className='font-bold'>Matricular</span> que você
                 será redirecionado para uma página de compras da Hotmart. Feito
                 isso, você poderá realizar as aulas através da própria
-                plataforma da Hotmart.
+                plataforma da Hotmart. Você receberar informações de quando as
+                aulas estarão disponíveis.
               </p>
               <p>
                 Caso o período de matrículas esteja encerrado, você poderá

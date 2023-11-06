@@ -11,7 +11,7 @@ const content = [
   {
     id: 1,
     title: 'Módulo 1: Introdução',
-    data: '',
+    data: '04 de Dezembro de 2023',
     episodes: [
       { id: 1, title: 'Sobre o curso' },
       { id: 2, title: 'Base de conhecimento' },
@@ -21,7 +21,7 @@ const content = [
   {
     id: 2,
     title: 'Módulo 2: Preparando ambiente',
-    data: '',
+    data: '11 de Dezembro de 2023',
     episodes: [
       { id: 1, title: 'Ferramentas necessárias' },
       { id: 2, title: 'Configurando VS Code' },
@@ -30,7 +30,7 @@ const content = [
   {
     id: 3,
     title: 'Módulo 3: Setup do Projeto',
-    data: '',
+    data: '18 de Dezembro de 2023',
     episodes: [
       { id: 1, title: 'Criando nosso projeto' },
       { id: 2, title: 'Entendendo os arquivos base do projeto' },
@@ -43,7 +43,7 @@ const content = [
   {
     id: 4,
     title: 'Módulo 4: Autenticação',
-    data: '',
+    data: '25 de Dezembro de 2023',
     episodes: [
       { id: 1, title: 'Tipos de autenticações' },
       { id: 2, title: 'NextAuth ou Clerk, qual utilizar?' },
@@ -54,7 +54,7 @@ const content = [
   {
     id: 5,
     title: 'Módulo 5: Layout',
-    data: '',
+    data: '01 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'O que são metadados' },
       { id: 2, title: 'Fonts' },
@@ -65,7 +65,7 @@ const content = [
   {
     id: 6,
     title: 'Módulo 6: Configurando Banco de Dados',
-    data: '',
+    data: '08 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'Configurando o PlanetScale' },
       { id: 2, title: 'Configurando Prisma ORM' },
@@ -74,7 +74,7 @@ const content = [
   {
     id: 7,
     title: 'Módulo 7: Criando Curso',
-    data: '',
+    data: '15 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'Entendendo Estilização CSS' },
       { id: 2, title: 'Criando componente de Novo Curso' },
@@ -91,7 +91,7 @@ const content = [
   {
     id: 8,
     title: 'Módulo 8: Listagem de Cursos',
-    data: '',
+    data: '22 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'Entendendo sobre Caching' },
       { id: 2, title: 'Lazy Loading' },
@@ -102,7 +102,7 @@ const content = [
   {
     id: 9,
     title: 'Módulo 9: Integração com Stripe',
-    data: '',
+    data: '29 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'Configurando Stripe' },
       { id: 2, title: 'Componente de Compra de Curso' },
@@ -112,7 +112,7 @@ const content = [
   {
     id: 10,
     title: 'Módulo 10: Dashboard do Aluno',
-    data: '',
+    data: '05 de Fevereiro de 2024',
     episodes: [
       { id: 1, title: 'Progresso do Aluno' },
       { id: 2, title: 'Dashboard do Aluno' },
@@ -121,7 +121,7 @@ const content = [
   {
     id: 11,
     title: 'Módulo 11: Deployment',
-    data: '',
+    data: '12 de Fevereiro de 2024',
     episodes: [
       { id: 1, title: 'Tudo sobre a Vercel' },
       { id: 2, title: 'Configurando novo projeto na Vercel' },
@@ -132,20 +132,8 @@ const content = [
   },
   {
     id: 12,
-    title: 'Módulo 12: Deployment',
-    data: '',
-    episodes: [
-      { id: 1, title: 'Tudo sobre a Vercel' },
-      { id: 2, title: 'Configurando novo projeto na Vercel' },
-      { id: 3, title: 'WebHooks Clerk' },
-      { id: 4, title: 'WebHooks Stripe' },
-      { id: 5, title: 'Analytics' },
-    ],
-  },
-  {
-    id: 13,
     title: 'Bônus 1',
-    data: '',
+    data: '06 de Dezembro de 2023',
     episodes: [
       { id: 1, title: 'Aula extra' },
       {
@@ -156,9 +144,9 @@ const content = [
     ],
   },
   {
-    id: 14,
+    id: 13,
     title: 'Bônus 2',
-    data: '',
+    data: '10 de Janeiro de 2024',
     episodes: [
       { id: 1, title: 'Aula extra' },
       {
@@ -286,7 +274,16 @@ function FeatureSection() {
         <Accordion type='single' collapsible className='w-full'>
           {content.map((item) => (
             <AccordionItem value={`item-${item.id}`} key={item.id}>
-              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionTrigger>
+                <div className='space-y-1 text-left'>
+                  <h4 className='text-sm font-medium leading-none'>
+                    {item.title}
+                  </h4>
+                  <p className='text-sm text-muted-foreground'>
+                    {`Disponível em ${item.data}`}
+                  </p>
+                </div>
+              </AccordionTrigger>
               <AccordionContent className='text-left'>
                 {item.episodes.map((episode) => (
                   <>

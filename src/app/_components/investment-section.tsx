@@ -50,11 +50,11 @@ function InvestmentSection() {
             <h4 className='font-bold'>
               12x
               <br />
-              R$<span className='text-6xl font-bold text-primary'>97,80</span>
+              R$<span className='text-6xl font-bold text-primary'>97,61</span>
             </h4>
             <h4 className='font-bold text-xl'>ou R$ 978,00 à vista</h4>
           </div>
-          <PreEnrollment />
+          {/* <PreEnrollment /> */}
           <Enrollment />
         </div>
       </div>

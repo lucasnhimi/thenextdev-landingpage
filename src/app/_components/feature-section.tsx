@@ -15,7 +15,6 @@ const content = [
     episodes: [
       { id: 1, title: 'Sobre o curso' },
       { id: 2, title: 'Base de conhecimento' },
-      { id: 3, title: 'Base de conhecimento' },
     ],
   },
   {

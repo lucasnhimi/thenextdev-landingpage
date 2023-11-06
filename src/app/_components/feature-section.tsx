@@ -1,9 +1,174 @@
+'use client';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Separator } from '@/components/ui/separator';
+
+const content = [
+  {
+    id: 1,
+    title: 'Módulo 1: Introdução',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Sobre o curso' },
+      { id: 2, title: 'Base de conhecimento' },
+      { id: 3, title: 'Base de conhecimento' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Módulo 2: Preparando ambiente',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Ferramentas necessárias' },
+      { id: 2, title: 'Configurando VS Code' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Módulo 3: Setup do Projeto',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Criando nosso projeto' },
+      { id: 2, title: 'Entendendo os arquivos base do projeto' },
+      { id: 3, title: 'Estruturas de pastas' },
+      { id: 4, title: 'Entendendo sobre Roteamento' },
+      { id: 5, title: 'Client Components x Server Components' },
+      { id: 6, title: 'Publicando projeto no GitHub' },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Módulo 4: Autenticação',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Tipos de autenticações' },
+      { id: 2, title: 'NextAuth ou Clerk, qual utilizar?' },
+      { id: 3, title: 'Configurando autenticação Clerk' },
+      { id: 4, title: 'Tela de Login e Registro' },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Módulo 5: Layout',
+    data: '',
+    episodes: [
+      { id: 1, title: 'O que são metadados' },
+      { id: 2, title: 'Fonts' },
+      { id: 3, title: 'Layout default' },
+      { id: 4, title: 'Layout dinâmico' },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Módulo 6: Configurando Banco de Dados',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Configurando o PlanetScale' },
+      { id: 2, title: 'Configurando Prisma ORM' },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Módulo 7: Criando Curso',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Entendendo Estilização CSS' },
+      { id: 2, title: 'Criando componente de Novo Curso' },
+      { id: 3, title: 'Criando tabela de Cursos' },
+      { id: 4, title: 'Entendendo Data Fetching' },
+      { id: 5, title: 'Criando API de Cursos' },
+      { id: 6, title: 'Como trabalhar com Formulários' },
+      { id: 7, title: 'Edição de Cursos' },
+      { id: 8, title: 'Edição de Episódios' },
+      { id: 9, title: 'Publicação de Cursos' },
+      { id: 10, title: 'Publicação de Episódios' },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Módulo 8: Listagem de Cursos',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Entendendo sobre Caching' },
+      { id: 2, title: 'Lazy Loading' },
+      { id: 3, title: 'Criando componente de Listagem de Curso' },
+      { id: 4, title: 'Filtro para Listagem de Curso' },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Módulo 9: Integração com Stripe',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Configurando Stripe' },
+      { id: 2, title: 'Componente de Compra de Curso' },
+      { id: 3, title: 'Integração com Stripe' },
+    ],
+  },
+  {
+    id: 10,
+    title: 'Módulo 10: Dashboard do Aluno',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Progresso do Aluno' },
+      { id: 2, title: 'Dashboard do Aluno' },
+    ],
+  },
+  {
+    id: 11,
+    title: 'Módulo 11: Deployment',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Tudo sobre a Vercel' },
+      { id: 2, title: 'Configurando novo projeto na Vercel' },
+      { id: 3, title: 'WebHooks Clerk' },
+      { id: 4, title: 'WebHooks Stripe' },
+      { id: 5, title: 'Analytics' },
+    ],
+  },
+  {
+    id: 12,
+    title: 'Módulo 12: Deployment',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Tudo sobre a Vercel' },
+      { id: 2, title: 'Configurando novo projeto na Vercel' },
+      { id: 3, title: 'WebHooks Clerk' },
+      { id: 4, title: 'WebHooks Stripe' },
+      { id: 5, title: 'Analytics' },
+    ],
+  },
+  {
+    id: 13,
+    title: 'Bônus 1',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Aula extra' },
+      {
+        id: 2,
+        title:
+          'Live: Quarta-feira, 6 de dezembro · 7:00 até 8:00pm Fuso horário: America/Sao_Paulo Como participar do Google Meet Link da videochamada: https://meet.google.com/som-akuz-nbo',
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: 'Bônus 2',
+    data: '',
+    episodes: [
+      { id: 1, title: 'Aula extra' },
+      {
+        id: 2,
+        title:
+          'Live: Quarta-feira, 10 de janeiro de 2024 · 7:00 até 8:00pm Fuso horário: America/Sao_Paulo Como participar do Google Meet Link da videochamada: https://meet.google.com/emy-cgvp-zav',
+      },
+    ],
+  },
+];
 
 function FeatureSection() {
   return (
@@ -92,7 +257,7 @@ function FeatureSection() {
             <div className='space-y-2'>
               <h3 className='font-bold'>Authentication</h3>
               <p className='text-sm text-muted-foreground'>
-                Autenticação usando NextAuth.js e middlewares.
+                Autenticação usando NextAuth.js/Clerk e middlewares.
               </p>
             </div>
           </div>
@@ -119,89 +284,21 @@ function FeatureSection() {
           conteúdo abaixo...
         </p>
         <Accordion type='single' collapsible className='w-full'>
-          <AccordionItem value='item-2'>
-            <AccordionTrigger>Módulo 2: Preparando Ambiente</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Configurando ambiente de desenvolvimento para criação do projeto.
-              Aqui iremos instalar todas ferramentas necessárias e configurar
-              nosso VS Code.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-3'>
-            <AccordionTrigger>Módulo 3: Setup do Projeto</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Criando nosso projeto e entendendo a estrutura de pastas e
-              arquivos.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-4'>
-            <AccordionTrigger>Módulo 4: Autenticação</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Implementando a configuração de autenticação com Clerk e
-              entendendo como funciona o fluxo de autenticação.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-5'>
-            <AccordionTrigger>Módulo 5: Layout</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Definindo o layout da aplicação e criando os componentes de UI.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-6'>
-            <AccordionTrigger>
-              Módulo 6: Configurando Banco de Dados
-            </AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Configurando o Prisma para conectar com o banco de dados no
-              PlanetScale.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-7'>
-            <AccordionTrigger>Módulo 7: Criando Curso</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Adicionando novos cursos na plataforma.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-8'>
-            <AccordionTrigger>Módulo 8: Listagem de Cursos</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Configurando o Prisma para conectar com o banco de dados.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-9'>
-            <AccordionTrigger>Módulo 9: Integração com Stripe</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Configurando o Prisma para conectar com o banco de dados.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-10'>
-            <AccordionTrigger>Módulo 10: Dashboard do Aluno</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Detalhamento de cursos concluídos e em andamento.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-11'>
-            <AccordionTrigger>Módulo 11: Deployment</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Publicando projeto na Vercel.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-12'>
-            <AccordionTrigger>Módulo 12: Bônus 1</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Quarta-feira, 6 de dezembro · 7:00 até 8:00pm Fuso horário:
-              America/Sao_Paulo Como participar do Google Meet Link da
-              videochamada: https://meet.google.com/som-akuz-nbo
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='item-13'>
-            <AccordionTrigger>Módulo 13: Bônus 2</AccordionTrigger>
-            <AccordionContent className='text-left'>
-              Quarta-feira, 10 de janeiro de 2024 · 7:00 até 8:00pm Fuso
-              horário: America/Sao_Paulo Como participar do Google Meet Link da
-              videochamada: https://meet.google.com/emy-cgvp-zav
-            </AccordionContent>
-          </AccordionItem>
+          {content.map((item) => (
+            <AccordionItem value={`item-${item.id}`} key={item.id}>
+              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionContent className='text-left'>
+                {item.episodes.map((episode) => (
+                  <>
+                    <div key={episode.id} className='text-sm'>
+                      {`Ep-${episode.id}: ${episode.title}`}
+                    </div>
+                    <Separator className='my-2' />
+                  </>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </section>

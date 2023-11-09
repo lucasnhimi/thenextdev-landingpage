@@ -9,7 +9,7 @@ import FaqSection from './_components/faq-section';
 export default function Home() {
   return (
     <>
-      <div className='fixed h-12 p-4 flex justify-center items-center group bg-gradient-to-r from-primary to-secondary w-full z-10'>
+      <div className='fixed h-18 md:h-12 text-sm md:text-base p-4 flex justify-center items-center group bg-gradient-to-r from-primary to-secondary w-full z-10'>
         <p className='text-white'>
           Utilize o cupom{' '}
           <span className='font-mono font-bold'>COMUNIDADETND</span> e ganhe 50%
@@ -20,7 +20,7 @@ export default function Home() {
           .
         </p>
       </div>
-      <main className=''>
+      <main className='pt-20 md:pt-18'>
         <IntroSection />
         <AboutSection />
         <FeatureSection />

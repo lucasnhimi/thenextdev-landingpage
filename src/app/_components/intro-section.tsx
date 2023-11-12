@@ -29,7 +29,7 @@ function IntroSection() {
       </svg>
       <div className='container flex max-w-[64rem] flex-col items-center text-center gap-4'>
         <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center'>
-          📅 1ª Turma novembro de 2023
+          📅 Incscrições encerradas.
           <ModeToggle />
         </span>
         <h1 className='font-heading text-4xl md:text-6xl lg:text-7xl'>
@@ -38,10 +38,9 @@ function IntroSection() {
           Full-stack <span className='text-primary'>Next.js 14</span>
         </h1>
         <p className='max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
-          Next.js não é futuro, é presente! Next.js não é hype, é realidade! Ou
-          você aprende agora ou vai ficar para trás. Entre para a primeira turma
-          hoje e aprenda a desenvolver aplicações altamente escaláveis
-          utilizando Next.js 14.
+          Invista na sua carreira e aprenda a desenvolver aplicações que as
+          grandes empresas estão utilizando. Faça parte da próxima turma da
+          formação mais completa de Next.js 14.
         </p>
         <div className='space-x-4'>
           <a

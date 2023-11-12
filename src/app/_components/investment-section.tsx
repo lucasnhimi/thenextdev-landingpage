@@ -14,8 +14,7 @@ function InvestmentSection() {
         </h2>
         <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
           Faça o melhor investimento da sua carreira. Veja os benefícios e
-          vantagens de ser um aluno da primeira turma do curso Full-stack
-          Next.js 14.
+          vantagens de ser um aluno do curso Full-stack Next.js 14.
         </p>
       </div>
 
@@ -54,8 +53,8 @@ function InvestmentSection() {
             </h4>
             <h4 className='font-bold text-xl'>ou R$ 978,00 à vista</h4>
           </div>
-          {/* <PreEnrollment /> */}
-          <Enrollment />
+          <PreEnrollment />
+          {/* <Enrollment /> */}
         </div>
       </div>
     </section>

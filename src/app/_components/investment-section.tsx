@@ -46,12 +46,12 @@ function InvestmentSection() {
         </div>
         <div className='flex flex-col gap-4 text-center'>
           <div className='space-y-2'>
-            <h4 className='font-bold'>
+            {/* <h4 className='font-bold'>
               12x
               <br />
               R$<span className='text-6xl font-bold text-primary'>97,61</span>
             </h4>
-            <h4 className='font-bold text-xl'>ou R$ 978,00 à vista</h4>
+            <h4 className='font-bold text-xl'>ou R$ 978,00 à vista</h4> */}
           </div>
           <PreEnrollment />
           {/* <Enrollment /> */}
